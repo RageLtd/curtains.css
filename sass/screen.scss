@@ -1,0 +1,86 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+* {
+
+}
+html {
+  height:100%;
+  width:100%;
+}
+body {
+  height:100%;
+  width:100%;
+}
+#container {
+  height:100%;
+  width:100%;
+  overflow:hidden;
+}
+#menu {
+  background:white;
+  padding:10px;
+  position:fixed;
+  top:50px;
+  left:50px;
+  z-index: 5;
+  box-shadow:0 0 15px rgba(220,220,220,.4);
+  li {
+    padding:5px;
+  }
+  label{
+    padding:5px;
+  }
+  label:hover {
+    color:white;
+    background:rgb(60,60,60);
+  }
+}
+.content {
+  height:100%;
+  width:100%;
+  li {
+    height:100%;
+    width:100%;
+    background:rgb(60,60,60);
+    box-shadow:0 -15px 15px rgba(220,220,220,.6);
+  }
+}
+h1 {
+  text-align:center;
+  font-size:3em;
+  color:white;
+}
+input[name="nav"] {
+  display:none;
+}
+#content1:checked ~ .content li {
+  -o-transform:translate(0,0);
+  -moz-transform:translate(0,0);
+  -webkit-transform:translate(0,0);
+
+  -webkit-transition:all ease .7s;
+  -moz-transition:all ease .7s;
+  -o-transition:all ease .7s;
+}
+#content2:checked ~ .content li {
+  -o-transform:translate(0,-100%);
+  -moz-transform:translate(0,-100%);
+  -webkit-transform:translate(0,-100%);
+
+  -webkit-transition:all ease .7s;
+  -moz-transition:all ease .7s;
+  -o-transition:all ease .7s;
+}
+#content3:checked ~ .content li {
+  -o-transform:translate(0,-200%);
+  -moz-transform:translate(0,-200%);
+  -webkit-transform:translate(0,-200%);
+
+  -webkit-transition:all ease .7s;
+  -moz-transition:all ease .7s;
+  -o-transition:all ease .7s;
+}
